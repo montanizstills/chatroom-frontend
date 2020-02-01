@@ -1,0 +1,40 @@
+<div id="nav_container">
+        <div id=signIn_dropDown_container class="navigationLinks"> 
+            <form id="login"  #login="ngForm" (ngSubmit)="onSubmit(login)" (keyup)="validate(username.value,password.value,email.value)">
+                <button [disabled]="!signed" id="signInButton" type="submit" 
+                [ngStyle]="{
+                            'background-color': signed&&signInOrUp ? 'green' : signed&&!signInOrUp ? 'red' : 'transparent',
+                            'border-radius':signed?'5px':'0em'
+                         }">
+                {{signInOrUp&&signed ? "Sign-In" : signed&&!signInOrUp ? "Sign-Up" : "Please fill in fields"}} 
+                </button>
+                <input class="fields" type="text" #username>
+                <input class="fields" type="password" #password>
+                <input class="fields" type="email" #email>
+            </form>
+        </div>
+    <div class="navigationLinks"><a routerLink="home">Home</a></div>
+    <div class="navigationLinks"><a routerLink="services-list" >Services</a></div>
+    <div class="navigationLinks"><a routerLink="chats"> Chats </a></div>
+    <!-- <div *ngIf="account" id="signedIn_WelcomeMessage">Welcome: {{account.username}}</div> -->
+</div>
+
+<!--
+    // enter username and password
+    // onSubmit() -- > create new account();
+    // store account data in root? app-component
+-->
+<!-- template: '
+        <app-header></app-header>
+        //body stuff ! 
+    ' 
+-->
+<!--
+    // if not signed in && text in chatbox
+    -- > disableChatBox()
+    -- > promt user to signIn() or register()
+    -- > reset()
+    -- > signedIn = true;
+    -- > display "Welcome {{account.username}}"
+-->
+

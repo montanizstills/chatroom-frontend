@@ -1,0 +1,22 @@
+#nav_container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #3c98ce;
+    border-radius: 5px;
+    min-height:17vh;
+    width:100%;
+}
+
+.navigationLinks{
+    margin:0rem 7em 0rem .4em;
+    /* bottom:0px; */
+}
+
+form{display: block;}
+input{display: block;}
+
+#signInButton{
+    font-size: 1em;
+    border:none;
+}
