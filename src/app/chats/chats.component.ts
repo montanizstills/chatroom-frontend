@@ -9,6 +9,8 @@ export class ChatsComponent implements OnInit {
 
   constructor() { }
 
+  friends = ["uno","dos","tres"];
+  
   ngOnInit() {
   }
 
