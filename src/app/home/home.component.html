@@ -3,5 +3,5 @@
     <li>To use the service simply type "$" followed by the ticker symbol of the company you would wish data from. Then add a service at the end. Ex: $AAPL.getPrice.</li>
     <li>For more information please check out our Services page to find a list of available services.</li>
 </ul>
-<textarea  id="bodyTextArea" cols="30" rows="10" #bodyChat (keyup.enter)="sendMessage(bodyChat.value);"></textarea>
+<textarea  [(ngModel)]="bodyTextAreaValue" id="bodyTextArea" cols="30" rows="10" #bodyChat (keydown.enter)="sendMessage();"></textarea>
 

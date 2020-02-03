@@ -17,11 +17,11 @@ export class HomeComponent implements OnInit {
 
   bodyTextAreaValue='';
 
-  sendMessage(message:String){
-    this.chatService.sendChatMessage( new Message("", message) ).subscribe(result=>{
-      console.log(result)
-      document.getElementById('bodyTextArea').innerHTML='';
-      // document.getElementById('bodyTextArea').innerHTML=result;
+  sendMessage(){
+    console.log(this.bodyTextAreaValue)
+    this.chatService.sendChatMessage( new Message("", this.bodyTextAreaValue) ).subscribe(result=>{
+      result = new Message(result.id,result.message)
+      this.bodyTextAreaValue= result.getMessage();
     });
   }
 

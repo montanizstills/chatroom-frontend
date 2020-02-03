@@ -1,22 +1,26 @@
 export class Message{
 
-    private id;
-    private message;
+    id;
+    message;
 
     constructor(id,message){
         this.id=id;
         this.message=message;
     }
 
-    // public getMessage(){
-    //     return this.message;
-    // }
+    getMessage():string{
+        return this.message;
+    }
+
+    get modifiedMessage(){
+        return this.message+"abc"
+    }
+
+
     // public setMessage(newMessage){
     //     this.message=newMessage
     // }
-    // public getId(){
-    //     return this.id;
-    // }
+
     // public setId(id){
     //     this.id=id;
     // }
